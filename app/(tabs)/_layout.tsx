@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Tabs } from 'expo-router'
 import AntDesign from '@expo/vector-icons/AntDesign';
+import { PaperProvider, IconButton } from 'react-native-paper';
 
 
 const _layout = () => {
@@ -12,7 +13,11 @@ const _layout = () => {
                 options={{
                     headerShown: false,
                     tabBarIcon: () => (
-                        <AntDesign name="home" size={24} color="black" />
+                        
+                <IconButton
+                    icon='home'
+                    size={29}        
+                />
                     )
                 }} />
 
@@ -21,7 +26,9 @@ const _layout = () => {
                 options={{
                     headerShown: false,
                     tabBarIcon: () => (
+
                         <AntDesign name="user" size={24} color="black" />
+
                     )
                 }} />
         </Tabs>

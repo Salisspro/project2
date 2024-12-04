@@ -24,7 +24,7 @@ const Profile = () => {
           <Ionicons name="call-outline" size={24} color="#eee3e3" />
           <Text style={{ color: '#fff' }}>Calls</Text>
         </View>
-
+ 
         <View style={styles.email}>
           <Fontisto name="email" size={24} color="#f9f2f2" />
           <Text style={{ color: '#fff' }}>Email Us</Text>

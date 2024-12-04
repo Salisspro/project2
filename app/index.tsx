@@ -1,7 +1,9 @@
 
-import { Button, Image, StatusBar, StyleSheet, Text, View } from 'react-native'
+import { Image, StatusBar, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { Link } from 'expo-router'
+import {  Button, List, MD3Colors } from 'react-native-paper';
+
 
 
 const index = () => {
@@ -15,7 +17,7 @@ const index = () => {
                     style={{ width: 450, height: 350 }}
                     source={require('../assets/New folder 2/logo10.png')} />
             </View>
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'flex-end', margin: 20, backgroundColor: '#ccc', padding: 20, borderRadius: 20 }}>
+            <View style={styles.linkContainer}>
 
                 <Image
                     style={{ width: 200, height: 200 }}
@@ -24,9 +26,19 @@ const index = () => {
                 <Link
                     style={styles.btn}
                     href='../Home'>
-                    <Text style={{ color: '#fff', }}>Start</Text>
+                    <Button
+                        icon='read'>
+                        Press me
+                    </Button>
+
                 </Link>
             </View>
+
+            {/* <>
+                <List.Icon color= {MD3Colors.neutral90} icon="folder" />
+                <List.Icon color={MD3Colors.tertiary70} icon="equal" />
+                <List.Icon color={MD3Colors.tertiary70} icon="calendar" />
+            </> */}
         </View>
     )
 }
@@ -40,10 +52,19 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     btn: {
-        backgroundColor: '#161625cd',
-        padding: 15,
+        backgroundColor: '#efefefcd',
+        padding: 5,
         width: 270,
         textAlign: 'center',
         borderRadius: 10
+    },
+    linkContainer: {
+        flex: 0.8,
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        margin: 20,
+        backgroundColor: '#ccc',
+        padding: 20,
+        borderRadius: 20
     }
 })
